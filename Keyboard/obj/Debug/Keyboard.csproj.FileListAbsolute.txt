@@ -1,0 +1,10 @@
+C:\Users\Sweet Home\Documents\DSA\Keyboard\Keyboard\bin\Debug\Keyboard.exe.config
+C:\Users\Sweet Home\Documents\DSA\Keyboard\Keyboard\bin\Debug\Keyboard.exe
+C:\Users\Sweet Home\Documents\DSA\Keyboard\Keyboard\bin\Debug\Keyboard.pdb
+C:\Users\Sweet Home\Documents\DSA\Keyboard\Keyboard\obj\Debug\Keyboard.csprojResolveAssemblyReference.cache
+C:\Users\Sweet Home\Documents\DSA\Keyboard\Keyboard\obj\Debug\Keyboard.Form1.resources
+C:\Users\Sweet Home\Documents\DSA\Keyboard\Keyboard\obj\Debug\Keyboard.Properties.Resources.resources
+C:\Users\Sweet Home\Documents\DSA\Keyboard\Keyboard\obj\Debug\Keyboard.csproj.GenerateResource.Cache
+C:\Users\Sweet Home\Documents\DSA\Keyboard\Keyboard\obj\Debug\Keyboard.csproj.CoreCompileInputs.cache
+C:\Users\Sweet Home\Documents\DSA\Keyboard\Keyboard\obj\Debug\Keyboard.exe
+C:\Users\Sweet Home\Documents\DSA\Keyboard\Keyboard\obj\Debug\Keyboard.pdb
