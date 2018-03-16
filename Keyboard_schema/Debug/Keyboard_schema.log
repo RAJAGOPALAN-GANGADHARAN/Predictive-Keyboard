@@ -1,4 +1,6 @@
 ﻿  Source.cpp
-c:\users\sweet home\documents\dsa\keyboard\keyboard_schema\source.cpp(34): warning C4018: '>=': signed/unsigned mismatch
-c:\users\sweet home\documents\dsa\keyboard\keyboard_schema\source.cpp(66): warning C4018: '<': signed/unsigned mismatch
+c:\users\sweet home\documents\dsa\keyboard\keyboard_schema\source.cpp(49): warning C4018: '>=': signed/unsigned mismatch
+c:\users\sweet home\documents\dsa\keyboard\keyboard_schema\source.cpp(74): warning C4018: '<': signed/unsigned mismatch
+c:\users\sweet home\documents\dsa\keyboard\keyboard_schema\source.cpp(100): warning C4101: 'l': unreferenced local variable
+c:\users\sweet home\documents\dsa\keyboard\keyboard_schema\source.cpp(138): warning C4018: '<': signed/unsigned mismatch
   Keyboard_schema.vcxproj -> C:\Users\Sweet Home\Documents\DSA\Keyboard\Debug\Keyboard_schema.dll
