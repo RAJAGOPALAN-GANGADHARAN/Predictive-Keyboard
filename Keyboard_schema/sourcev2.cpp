@@ -1,154 +1,5 @@
-#include "stdafx.h"
-/*#include<stdio.h>
-#include<iostream>
-#include<fstream>
-#include<ctype.h>
-#include<string>
-using namespace std;
-fstream g("out.txt", ios::out);
-int Hash(string s)
-{
-	int t = s.size();
-	return tolower(s[t - 1]) - 'a';
-}
-//int i=0;
-class trie
-{
-
-public:
-	trie * words[26] = { NULL };
-	int prob;
-	int id;
-	string content;
-	trie(string s)
-	{
-		content = s;
-		prob = 0;
-	}
-};
-void insert(trie* head[], string parent, int size_of = 1)
-{
-	string sub;
-	if (parent.size() >= size_of)
-	{
-		sub = parent.substr(0, size_of);
-		int t_p = Hash(sub);
-		if (head[t_p] == NULL)
-			head[t_p] = new trie(sub);
-		insert(head[t_p]->words, parent, size_of + 1);
-	}
-}
-void print(trie* words[])
-{
-	for (int i = 0; i<26; ++i)
-	{
-		if (words[i] != NULL)
-		{
-			g << words[i]->content << endl;
-			print(words[i]->words);
-		}
-	}
-}
-
-
-extern "C"
-{
-	__declspec(dllexport) void test()
-	{
-
-		trie* head[26] = { NULL };
-		fstream f("train.txt", ios::in);
-
-		string temp;
-		while (!f.eof())
-		{
-			f >> temp;
-			insert(head, temp);
-		}
-		print(head);
-	}
-}*/
-/*#include<stdio.h>
-#include<iostream>
-#include<vector>
-#include<fstream>
-#include<ctype.h>
-#include<string>
-using namespace std;
-
-fstream g("out.txt", ios::out);
-int Hash(string s)
-{
-int t = s.size();
-return tolower(s[t - 1]) - 'a';
-}
-
-class trie
-{
-
-public:
-trie * words[26] = { NULL };
-vector<trie*>links;
-int prob;
-bool full;
-string content;
-trie(string s)
-{
-content = s;
-full = false;
-prob = 0;
-}
-}*prev=NULL,*curr=NULL;
-void insert(trie* head[], string parent, int size_of = 1)
-{
-string sub;
-if (parent.size() >= size_of)
-{
-sub = parent.substr(0, size_of);
-int t_p = Hash(sub);
-if (head[t_p] == NULL)
-head[t_p] = new trie(sub);
-::curr = head[t_p];
-insert(head[t_p]->words, parent, size_of + 1);
-}
-else
-{
-::curr->full = true;
-if (::prev == NULL)
-{
-::prev = ::curr;
-}
-else
-{
-::curr->links.push_back(::prev);
-::prev = ::curr;
-}
-return;
-}
-}
-void print(trie* words[])
-{
-for (int i = 0; i<26; ++i)
-{
-if (words[i] != NULL )
-{
-g<< words[i]->content << endl;
-print(words[i]->words);
-g << "Links:" << endl;
-for (int j = 0; j < words[i]->links.size(); ++j)
-{
-g << words[i]->links[j]->content << ' ';
-}
-g << endl;
-}
-
-
-}
-}*/
-/* 
-***********LATEST SUCCESSFUL BUILD
 #include"stdafx.h"
-#include<stdio.h>
+/*#include<stdio.h>
 #include<iostream>
 #include<vector>
 #include<fstream>
@@ -156,165 +7,225 @@ g << endl;
 #include<ctype.h>
 #include<string>
 #include<windows.h>
+#include<map>
+#include<functional>
 #include<algorithm>
+#include<sstream>
+#include<thread>
+
 using namespace std;
-fstream g("out.txt", ios::out);
-int Hash(string s)
-{
-int t = s.size();
-return tolower(s[t - 1]) - 'a';
-}
-//int i=0;
+string file_name = "train2.txt";
+fstream f(file_name, ios::in);
 class trie
 {
-
 public:
-trie * words[26] = { NULL };
-vector<trie* >links;
-int prob;
-bool complete;
-string content;
-trie(string s)
-{
-content = s;
-complete = false;
-prob = 0;
-}
+	trie * words[26] = { NULL };
+	vector<pair<trie*, int> > links;
+	int prob;
+	bool complete;
+	string content;
+	trie(string s)
+	{
+		content = s;
+		complete = false;
+		prob = 1;
+	}
 }*prev = NULL, *curr = NULL;
+
 trie* head[26] = { NULL };
-bool compare(trie* a, trie* b)
+multimap<int, trie*, greater<int>> dict;
+vector<trie*>final;
+
+int Hash(string s)
 {
-return (a->prob>b->prob);
+	int t = s.size();
+	return tolower(s[t - 1]) - 'a';
 }
-void insert(trie* head[], string parent, int size_of = 1)
+bool compare(pair<trie*, int> a, pair<trie*, int> b)
 {
-//cout<<parent;
-string sub;
-if (parent.size() >= size_of)
-{
-sub = parent.substr(0, size_of);
-int t_p = Hash(sub);
-if (head[t_p] == NULL)
-head[t_p] = new trie(sub);
-head[t_p]->prob++;
-::curr = head[t_p];
-insert(head[t_p]->words, parent, size_of + 1);
+	return(a.second>b.second);
 }
-else
+void insert(trie* head[], string parent, int type, int size_of = 1)
 {
-::curr->complete = true;
-if (::prev == NULL)
-{
-::prev = ::curr;
+	string sub;
+	if (parent.size() >= size_of)
+	{
+		sub = parent.substr(0, size_of);
+		if (!isalpha(sub[sub.size() - 1]))
+		{
+			::curr = NULL;
+		}
+		else
+		{
+			int t_p = Hash(sub);
+			if (head[t_p] == NULL)
+				head[t_p] = new trie(sub);
+			else
+			{
+				head[t_p]->prob++;
+			}
+			::curr = head[t_p];
+			insert(head[t_p]->words, parent, type, size_of + 1);
+		}
+	}
+	else
+	{
+		::curr->complete = true;
+		
+		if (type)
+		{
+			fstream g(file_name, ios::out | ios::app);
+			g << parent << ' ';
+			g.close();
+		}
+		if (::prev == NULL)
+		{
+			::prev = ::curr;
+		}
+		else
+		{
+			int f = -1;
+			fstream err("error.txt", ios::out | ios::app);
+			//err << "currentword:" << ::curr->content << endl;
+
+			for (int i = 0; i < ::prev->links.size() && f == -1; i++)
+			{
+				//err << ::curr << ' ' << ::prev->links[i].first << ' ' << ::prev->links[i].first->content << endl;
+				if (::curr == ::prev->links[i].first)
+					f = i;
+			}
+			if (f != -1)
+			{
+				::prev->links[f].second++;
+			}
+			else
+			{
+				::prev->links.push_back(pair<trie*, int>(::curr, 1));
+			}
+			sort(::prev->links.begin(), ::prev->links.end(), compare);
+			::prev = ::curr;
+			err.close();
+		}
+	}
 }
-else
+void Print(char *str1, char *str2, char *str3)
 {
-::prev->links.push_back(::curr);
-sort(::prev->links.begin(), ::prev->links.end(), compare);
-::prev = ::curr;
+	int t = (dict.size()<3) ? dict.size() : 3;
+	int z = 0, l;
+	for (auto it = dict.begin(); z < t; z++, it++)
+	{
+		if (z == 0)
+		{
+			strcpy_s(str1, 30, it->second->content.c_str());
+		}
+		if (z == 1)
+		{
+			strcpy_s(str2, 30, it->second->content.c_str());
+		}
+		if (z == 2)
+		{
+			strcpy_s(str3, 30, it->second->content.c_str());
+		}
+		final.push_back(it->second);
+	}
+	dict.clear();
 }
-//cout<<::curr->content<<' '<<::prev->content<<endl;
-return;
+
+void Sort(trie* words[])
+{
+	for (int i = 0; i<26; ++i)
+	{
+		if (words[i] != NULL)
+		{
+			if (words[i]->complete)
+			{
+				dict.insert(pair<int, trie*>(words[i]->prob, words[i]));
+			}
+			Sort(words[i]->words);
+		}
+	}
 }
+void search(trie *words[], string s, int start = 0)
+{
+	int t = (start<s.size()) ? start : -1;
+	if (t != -1)
+	{
+		t = int(s[t] - 'a');
+		if (words[t] != NULL)
+		{
+			if (words[t]->complete)
+				dict.insert(pair<int, trie*>(words[t]->prob, words[t]));
+			search(words[t]->words, s, start + 1);
+		}
+		else
+		{
+			//inserting
+		}
+	}
+	else
+	{
+		t = int(tolower(s[s.size() - 1]) - 'a');
+		Sort(words);
+	}
 }
-void nextword()
+void nextword(char *str1, char *str2, char *str3, int choice = 0)
 {
-for (int j = 0; j<::curr->links.size() && j<3; ++j)
-{
-cout << ::curr->links[j]->content << ' ';
+	::curr = (final.size() != 0) ? final[choice] : ::curr;
+	final.clear();
+	int t = (::curr->links.size()>3) ? 3 : (::curr->links.size());
+	for (int i = 0; i<t; i++)
+	{
+		if (i == 0)
+		{
+			strcpy_s(str1, 30, ::curr->links[i].first->content.c_str());
+		}
+		if (i == 1)
+		{
+			strcpy_s(str2, 30, ::curr->links[i].first->content.c_str());
+		}
+		if (i == 2)
+		{
+			strcpy_s(str3, 30, ::curr->links[i].first->content.c_str());
+		}
+		final.push_back(::curr->links[i].first);
+	}
 }
-cout << endl;
-}
-void print(trie* words[])
+extern "C"
 {
-for (int i = 0; i<26; ++i)
-{
-if (words[i] != NULL)
-{
-if (words[i]->complete)
-{
-cout << words[i]->content << endl;
-/*cout<<"****links********"<<endl;
-for(int j=0;j<words[i]->links.size();++j)
-{
-cout<<words[i]->links[j]->content << ' ';
-}
-cout<<endl;*/
-//::curr = words[i];
-//			}
-//			print(words[i]->words);
-//			/*cout << "Links:" << endl;
-//			for (int j = 0; j < words[i]->links.size(); ++j)
-//			{
-//			cout<< words[i]->links[j]->content << ' ';
-//			}
-//			cout<<endl;*/
-//		}
-//	}
-//}
-//void search(trie *words[], string s, int start = 0)
-//{
-//	int t = (start<s.size()) ? start : -1;
-//	if (t != -1)
-//	{
-//		t = int(s[t] - 'a');
-//		if (words[t] != NULL)
-//		{
-//			if (words[t]->complete)
-//				cout << words[t]->content << endl;
-//			search(words[t]->words, s, start + 1);
-//		}
-//		else
-//		{
-//			insert(words, s, start);
-//		}
-//	}
-//	else
-//	{
-//		t = int(s[s.size() - 1] - 'a');
-//		print(words);
-//	}
-//
-//}
-//void dummy()
-//{
-//
-//
-//	/* //print(head);
-//	cout << "*************" << endl;
-//	string t = "";
-//	if (t == " ")
-//	nextword();
-//	cout << "*******" << t << endl;
-//	search(head, t);
-//	cout << "*******" << endl;
-//	Sleep(40);
-//	system("cls");
-//	//}*/
-//}
-//
-//extern "C"
-//{
-//	__declspec(dllexport) void init()
-//	{
-//		fstream f("train.txt", ios::in);
-//		string temp;
-//		while (!f.eof())
-//		{
-//			f >> temp;
-//			insert(head, temp);
-//		}
-//	}
-//	__declspec(dllexport) void test(const char *str)
-//	{
-//
-//		//trie* head[26] = { NULL };
-//		//fstream f("train.txt", ios::in);
-//		init();
-//		string temp(str);
-//		//cout << temp;
-//		search(head, temp);
-//	}
-//}
-//
-//*/
+	__declspec(dllexport) void init()
+	{
+		string temp, line;
+		while (!f.eof())
+		{
+			getline(f, line);
+			stringstream ls(line);
+			::prev = NULL;
+			while (ls >> temp)
+			{
+				insert(head, temp, 0);
+			}
+		}
+		fstream g(file_name, ios::out | ios::app);
+		g << endl;
+		g.close();
+	}
+	__declspec(dllexport) void Space(const char*prev, char*str1, char*str2, char*str3, int choice)
+	{
+		insert(head, prev, 1);
+		nextword(str1, str2, str3, choice);
+	}
+	__declspec(dllexport) void Search(const char *text, char*str1, char*str2, char*str3)
+	{
+		string to_search(text);
+		search(head, to_search);
+		Print(str1, str2, str3);
+	}
+	__declspec(dllexport) void Enter()
+	{
+		fstream g(file_name, ios::out | ios::app);
+		g << endl;
+		::curr = NULL;
+		g.close();
+	}
+
+}*/

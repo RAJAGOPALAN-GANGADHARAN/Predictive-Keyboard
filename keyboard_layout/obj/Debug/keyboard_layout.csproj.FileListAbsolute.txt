@@ -1,0 +1,10 @@
+C:\Users\Sweet Home\Documents\DSA\Keyboard\keyboard_layout\bin\Debug\keyboard_layout.exe.config
+C:\Users\Sweet Home\Documents\DSA\Keyboard\keyboard_layout\bin\Debug\keyboard_layout.exe
+C:\Users\Sweet Home\Documents\DSA\Keyboard\keyboard_layout\bin\Debug\keyboard_layout.pdb
+C:\Users\Sweet Home\Documents\DSA\Keyboard\keyboard_layout\obj\Debug\keyboard_layout.csprojResolveAssemblyReference.cache
+C:\Users\Sweet Home\Documents\DSA\Keyboard\keyboard_layout\obj\Debug\keyboard_layout.Form1.resources
+C:\Users\Sweet Home\Documents\DSA\Keyboard\keyboard_layout\obj\Debug\keyboard_layout.Properties.Resources.resources
+C:\Users\Sweet Home\Documents\DSA\Keyboard\keyboard_layout\obj\Debug\keyboard_layout.csproj.GenerateResource.Cache
+C:\Users\Sweet Home\Documents\DSA\Keyboard\keyboard_layout\obj\Debug\keyboard_layout.csproj.CoreCompileInputs.cache
+C:\Users\Sweet Home\Documents\DSA\Keyboard\keyboard_layout\obj\Debug\keyboard_layout.exe
+C:\Users\Sweet Home\Documents\DSA\Keyboard\keyboard_layout\obj\Debug\keyboard_layout.pdb

@@ -1,0 +1,265 @@
+currentword:everybody
+currentword:i
+currentword:am
+currentword:raj
+currentword:friends
+currentword:friends
+028D4F08 028D4F08 friends
+currentword:friends
+028D4F08 028D4F08 friends
+currentword:everybody
+028D41C0 028D41C0 everybody
+currentword:i
+028D5480 028D5480 i
+currentword:geek
+currentword:everybody
+028D41C0 028D41C0 everybody
+currentword:everybody
+028D41C0 028D41C0 everybody
+currentword:raj
+028D44E0 028D5480 i
+currentword:is
+currentword:awesome
+currentword:raj
+currentword:is
+028D5AC0 028D5AC0 is
+currentword:awesome
+06EC2D80 06EC2D80 awesome
+currentword:lossu
+06EC2E48 028D44E0 raj
+currentword:raj
+currentword:killo
+06EC2420 028D5AC0 is
+currentword:is
+028D5AC0 028D5AC0 is
+currentword:awesome
+06EC2D80 06EC2D80 awesome
+currentword:everybody
+028D41C0 028D41C0 everybody
+currentword:everybody
+currentword:i
+currentword:am
+currentword:raj
+currentword:friends
+currentword:friends
+0A1A1420 0A1A1420 friends
+currentword:friends
+0A1A1420 0A1A1420 friends
+currentword:everybody
+0A1A18D0 0A1A18D0 everybody
+currentword:i
+0A1A11C8 0A1A11C8 i
+currentword:geek
+currentword:everybody
+0A1A18D0 0A1A18D0 everybody
+currentword:everybody
+0A1A18D0 0A1A18D0 everybody
+currentword:raj
+0A1A07A0 0A1A11C8 i
+currentword:is
+currentword:awesome
+currentword:raj
+currentword:is
+0A1A1A60 0A1A1A60 is
+currentword:awesome
+0A1A9270 0A1A9270 awesome
+currentword:lossu
+0A1A8AA0 0A1A07A0 raj
+currentword:raj
+currentword:killo
+0A1A91A8 0A1A1A60 is
+currentword:is
+0A1A1A60 0A1A1A60 is
+currentword:awesome
+0A1A9270 0A1A9270 awesome
+currentword:everybody
+0A1A18D0 0A1A18D0 everybody
+currentword:everybody
+0A1A18D0 0A1A18D0 everybody
+currentword:raj
+0A1A07A0 0A1A11C8 i
+0A1A07A0 0A1A07A0 raj
+currentword:everybody
+currentword:i
+currentword:am
+currentword:raj
+currentword:friends
+currentword:friends
+095221D0 095221D0 friends
+currentword:friends
+095221D0 095221D0 friends
+currentword:everybody
+095216E0 095216E0 everybody
+currentword:i
+09522680 09522680 i
+currentword:geek
+currentword:everybody
+095216E0 095216E0 everybody
+currentword:everybody
+095216E0 095216E0 everybody
+currentword:raj
+09521D20 09522680 i
+currentword:is
+currentword:awesome
+currentword:raj
+currentword:is
+09522FE0 09522FE0 is
+currentword:awesome
+09536640 09536640 awesome
+currentword:lossu
+095371F8 09521D20 raj
+currentword:raj
+currentword:killo
+09536258 09522FE0 is
+currentword:is
+09522FE0 09522FE0 is
+currentword:awesome
+09536640 09536640 awesome
+currentword:everybody
+095216E0 095216E0 everybody
+currentword:everybody
+095216E0 095216E0 everybody
+currentword:raj
+09521D20 09522680 i
+09521D20 09521D20 raj
+currentword:is
+currentword:boyvenu
+09535E70 09536640 awesome
+currentword:venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09536640 awesome
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09536640 awesome
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09536640 awesome
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
+currentword:boyvenu
+09535E70 09535E70 boyvenu
+currentword:venu
+09537518 09537518 venu
+currentword:is
+09522FE0 09522FE0 is
